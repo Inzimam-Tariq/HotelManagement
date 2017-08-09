@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itsoftsolutions.controller.FloorSetupController">
+   <children>
+      <Separator layoutX="283.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="14.0" layoutY="37.0" prefHeight="292.0" prefWidth="259.0">
+         <children>
+            <Label layoutX="14.0" layoutY="35.0" prefHeight="17.0" prefWidth="130.0" text="Number of levels : " />
+            <TextField fx:id="num_level_input" layoutX="122.0" layoutY="31.0" onAction="#num_level_input_action" prefHeight="25.0" prefWidth="130.0" />
+            <JFXButton fx:id="level_save_btn" buttonType="RAISED" layoutX="122.0" layoutY="140.0" onAction="#level_save_btn_action" prefHeight="25.0" prefWidth="70.0" ripplerFill="#165b80" style="-fx-background-color: #09b6bc;" text="Save" textAlignment="JUSTIFY" underline="true" />
+         </children>
+      </Pane>
+      <TableView fx:id="tabelView" editable="true" layoutX="291.0" layoutY="38.0" prefHeight="292.0" prefWidth="292.0">
+        <columns>
+          <TableColumn fx:id="floor_level_col" editable="false" prefWidth="116.0" text="Floor Level" />
+          <TableColumn fx:id="num_room_col"  prefWidth="174.0" text="Number of Rooms" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="save_btn" buttonType="RAISED" layoutX="300.0" layoutY="348.0" onAction="#save_btn_action" prefHeight="25.0" prefWidth="70.0" ripplerFill="#165b80" style="-fx-background-color: #09b6bc;" text="Save" textAlignment="JUSTIFY" underline="true" />
+      <JFXButton fx:id="cancel_btn" buttonType="RAISED" layoutX="408.0" layoutY="348.0" onAction="#cancel_btn_action" prefHeight="25.0" prefWidth="70.0" ripplerFill="#165b80" style="-fx-background-color: #09b6bc;" text="Cancel" textAlignment="JUSTIFY" underline="true" />
+      <JFXButton fx:id="close_btn" buttonType="RAISED" layoutX="513.0" layoutY="348.0" onAction="#close_btn_action" prefHeight="25.0" prefWidth="70.0" ripplerFill="#165b80" style="-fx-background-color: #09b6bc;" text="Close" textAlignment="JUSTIFY" underline="true" />
+   </children>
+</AnchorPane>

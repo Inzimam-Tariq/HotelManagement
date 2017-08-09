@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itsoftsolutions.controller.RoomTypeSetupController">
+   <children>
+      <Separator layoutX="297.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="376.0" prefWidth="272.0">
+        <columns>
+          <TableColumn fx:id="roomNoCol" prefWidth="75.0" text="Room No." />
+          <TableColumn fx:id="roomTypeCol" prefWidth="103.0" text="Room Type" />
+        </columns>
+      </TableView>
+      <Pane layoutX="303.0" layoutY="14.0" prefHeight="376.0" prefWidth="287.0">
+         <children>
+            <Label layoutX="14.0" layoutY="29.0" prefHeight="17.0" prefWidth="133.0" text="Room Type Setup" />
+            <Label layoutX="14.0" layoutY="68.0" prefHeight="17.0" prefWidth="84.0" text="Room No. :" />
+            <Label layoutX="14.0" layoutY="111.0" prefHeight="17.0" prefWidth="84.0" text="Room Type :" />
+            <TextField fx:id="room_no_input" layoutX="117.0" layoutY="64.0" prefHeight="25.0" prefWidth="156.0" promptText="i.e. 101 / 203" />
+            <TextField fx:id="room_type_input" layoutX="117.0" layoutY="107.0" prefHeight="25.0" prefWidth="156.0" promptText="i.e. single" />
+            <JFXButton fx:id="saveBtn" layoutX="92.0" layoutY="203.0" onAction="#saveBtnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #09b6bc;" text="Save" />
+            <JFXButton fx:id="editBtn" layoutX="92.0" layoutY="256.0" onAction="#editBtnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #09b6bc;" text="Edit" />
+            <JFXButton fx:id="closeBtn" layoutX="189.0" layoutY="256.0" onAction="#closeBtnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #09b6bc;" text="Close" />
+            <JFXButton fx:id="cancelBtn" layoutX="189.0" layoutY="203.0" onAction="#cancelBtnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #09b6bc;" text="Cancel" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

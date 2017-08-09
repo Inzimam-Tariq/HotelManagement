@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.itsoftsolutions.controller.MainController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="630.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+        <menus>
+            <Menu fx:id="login_menu" mnemonicParsing="false" onAction="#login_menu_action" text="Login" />
+          <Menu fx:id="logout_menu" mnemonicParsing="false" onAction="#logout_menu_action" text="Logout" />
+          <Menu fx:id="front_office_menu" mnemonicParsing="false" text="Front Office">
+            <items>
+                  <Menu fx:id="front_office_setup_menu" mnemonicParsing="false" onAction="#front_office_setup_menu_action" text="Setup">
+                    <items>
+                        <Menu fx:id="room_setup_menu" mnemonicParsing="false" text="Room Setup">
+                          <items>
+                            <MenuItem fx:id="level_setup_menu_item" mnemonicParsing="false" onAction="#level_setup_menu_item_action" text="Level Setup" />
+                              <MenuItem fx:id="room_type_menu_item" mnemonicParsing="false" onAction="#room_type_menu_item_action" text="Room Type Setup" />
+                          </items>
+                        </Menu>
+                      <MenuItem fx:id="workshift_menu_item" mnemonicParsing="false" onAction="#workshift_menu_item_action" text="Work Shift" />
+                        <MenuItem fx:id="user_account_menu_item" mnemonicParsing="false" onAction="#user_account_menu_item_action" text="User Account" />
+                        <MenuItem fx:id="currency_menu_item" mnemonicParsing="false" onAction="#currency_menu_item_action" text="Currency" />
+                        <MenuItem fx:id="exchange_menu_item" mnemonicParsing="false" onAction="#exchange_menu_item_action" text="Exchange Rate" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="status_menu_item" mnemonicParsing="false" onAction="#status_menu_item_action" text="Status" />
+                  <MenuItem fx:id="minibar_menu_item" mnemonicParsing="false" onAction="#minibar_menu_item_action" text="MiniBar" />
+                  <Menu fx:id="laundry_menu_item" mnemonicParsing="false" text="Laundry">
+                    <items>
+                      <MenuItem fx:id="laundry_new_order_menu_item" mnemonicParsing="false" onAction="#laundry_new_order_menu_item_action" text="New Order" />
+                        <MenuItem fx:id="laundry_order_menu_item" mnemonicParsing="false" onAction="#laundry_order_menu_item_action" text="Order" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="restaurant_menu_item" mnemonicParsing="false" onAction="#restaurant_menu_item_action" text="Restaurant" />
+                  <MenuItem fx:id="report_menu_item" mnemonicParsing="false" onAction="#report_menu_item_action" text="Report" />
+            </items>
+          </Menu>
+          <Menu fx:id="travel_menu" mnemonicParsing="false" text="Travel Tour">
+            <items>
+                  <Menu fx:id="travel_setup_menu" mnemonicParsing="false" text="Setup">
+                    <items>
+                      <MenuItem fx:id="guide_setup_menu_item" mnemonicParsing="false" onAction="#guide_setup_menu_item_action" text="Guide Setup" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="travel_setup_menu_item" mnemonicParsing="false" onAction="#travel_setup_menu_item_action" text="Setup" />
+                  <MenuItem fx:id="inb_trans_menu_item" mnemonicParsing="false" onAction="#inb_trans_menu_item_action" text="Inbound Transportation" />
+                  <MenuItem fx:id="other_services_menu_item" mnemonicParsing="false" onAction="#other_services_menu_item_action" text="Other Services" />
+            </items>
+          </Menu>
+            <Menu fx:id="sale_menu" mnemonicParsing="false" onAction="#sale_menu_action" text="Sale Report" />
+            <Menu fx:id="inventory_menu" mnemonicParsing="false" text="Inventory">
+              <items>
+                <MenuItem fx:id="vender_setup_menu_item" mnemonicParsing="false" onAction="#vender_setup_menu_item_action" text="Vendor Setup" />
+                  <MenuItem fx:id="create_vend_inv_menu_item" mnemonicParsing="false" onAction="#create_vend_inv_menu_item_action" text="Create Vendor Invoice" />
+                  <MenuItem fx:id="note_menu_item" mnemonicParsing="false" onAction="#note_menu_item_action" text="Note" />
+                  <MenuItem fx:id="used_menu_item" mnemonicParsing="false" onAction="#used_menu_item_action" text="Used" />
+                  <MenuItem fx:id="demage_menu_item" mnemonicParsing="false" onAction="#demage_menu_item_action" text="Demage" />
+                  <MenuItem fx:id="lost_menu_item" mnemonicParsing="false" onAction="#lost_menu_item_action" text="Lost" />
+                  <MenuItem fx:id="return_menu_item" mnemonicParsing="false" onAction="#return_menu_item_action" text="Returned" />
+                  <MenuItem fx:id="Inventry_report_menu_item" mnemonicParsing="false" onAction="#Inventry_report_menu_item_action" text="Report" />
+              </items>
+            </Menu>
+            <Menu fx:id="hr_menu" mnemonicParsing="false" text="HR">
+              <items>
+                <MenuItem fx:id="hr_setup_menu_item" mnemonicParsing="false" onAction="#hr_setup_menu_item_action" text="Setup" />
+                  <MenuItem fx:id="attendence_menu_item" mnemonicParsing="false" onAction="#attendence_menu_item_action" text="Attendence" />
+                  <MenuItem fx:id="payroll_menu_item" mnemonicParsing="false" onAction="#payroll_menu_item_action" text="Payroll" />
+              </items>
+            </Menu>
+            <Menu fx:id="about_menu" mnemonicParsing="false" text="About Us">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+            <Menu fx:id="help_menu" mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="username_label" layoutX="14.0" layoutY="329.0" prefHeight="17.0" prefWidth="162.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Label fx:id="date_lebel" layoutX="588.0" layoutY="329.0" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+   </children>
+</AnchorPane>
